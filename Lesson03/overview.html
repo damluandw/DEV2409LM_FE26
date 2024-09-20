@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+</head>
+<body>
+    <!-- Table -->
+     <table border="1" cellspacing ="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Cột 1</th>
+                <th>Cột 2</th>
+                <th>Cột 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">cột 1</td>
+                <!-- <td>cột 2</td> -->
+                <td>cột 3</td>
+            </tr>
+            <tr>
+                <td rowspan="2">cột 1</td>
+                <td>cột 2</td>
+                <td>cột 3</td>
+            </tr>
+            <tr>
+                <!-- <td>cột 1</td> -->
+                <td>cột 2</td>
+                <td>cột 3</td>
+            </tr>
+            <tr>
+                <td>cột 1</td>
+                <td>cột 2</td>
+                <td>cột 3</td>
+            </tr>
+            <tr>
+                <td>cột 1</td>
+                <td>cột 2</td>
+                <td>cột 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>cột 1</td>
+                <td>cột 2</td>
+                <td>cột 3</td>
+            </tr>
+        </tfoot>
+     </table>
+
+     <!-- Form -->
+      <!-- 
+      type của thẻ input: text, password, number, datetime, email,range,...
+      phân biệt type sumbit/button:
+      -->
+      <form action="" method="post" enctype="multipart/form-data">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        
+        <select name="diaChi" id="diaChi">
+            <option value="HN">Hà Nội</option>
+            <option value="HP">Hải Phòng</option>
+            <option value="QN">Quảng Ninh</option>
+        </select>
+
+        <textarea name="moTa" id="moTa"></textarea>
+
+      </form>
+</body>
+</html>
