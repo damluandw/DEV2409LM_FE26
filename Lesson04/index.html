@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Các cách sử dụng CSS</title>
+        <!-- CSS trong file HTML - thẻ style -->
+        <style>
+            /* Có 4 cách tương tác với thẻ HTML */
+            /* tương với tên thẻ */
+            h3{
+                color: blue;
+            }
+            h2{
+                color: aqua;
+            }
+            /* tương với tên id của thẻ */
+            #css-in-file{
+                background-color: bisque;
+            }
+            /* tương với tên class của thẻ */
+            .bg-blue{
+                background-color: rgb(81, 81, 246);
+            }
+            /* tương tác với tên thuộc tính */
+            [type="text"]{
+                border: 3px solid #000;               
+            }
+            [data-id="test"]{
+                border: 3px solid #000;               
+            }
+            /* tương với tên thẻ */
+            input{
+                border: 3px solid #b11212;   
+            }
+         </style>
+        <!-- CSS ngoài file HTML - link đến file css -->
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <!-- Có 3 cách sử dụng CSS -->
+        <!-- Cách 1: CSS trực tiếp trên thẻ HTML -->
+        <h2 style="color: red;">CSS trực tiếp trên thẻ HTML</h2>
+        <!-- Cách 2: CSS trong file HTML -->
+        <h3 data-id="test" id="css-in-file">CSS trong file HTML</h3>
+        <!-- Cách 3: CSS ngoài file HTML - link đến file css -->
+        <div>
+            <h3 class="bg-blue">CSS ngoài file HTML - link đến file CSS</h3>
+            <p class="bg-blue">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptate esse quos ad ducimus possimus sit repellat impedit,
+                quam cum alias illum cupiditate vero, inventore iste amet
+                officia libero labore sequi.
+            </p>
+        </div>
+        <form action>
+            <div>
+                <label for="userName">UserName</label>
+                <input type="text" name="userName" id="userName"><br>
+            </div>
+            <div>
+                <label for="password">password</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+        </form>
+        <a href="#">trang test</a>
+    </body>
+</html>

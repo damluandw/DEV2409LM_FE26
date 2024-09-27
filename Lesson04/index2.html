@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+        <style>
+        /* Tag01 Tag02 - css cho giá trị có tag02 nằm trong tag01 */
+        section div{
+            background-color: aqua;
+        }
+        section p{
+            color: red;
+        }
+        /* Tag01,Tag02 - CSS cho cả tag01 và tag02*/
+        h2,h3{
+            color: rgb(27, 7, 174);
+            background-color: blanchedalmond;
+        }
+        /* 
+        h2{
+            color: rgb(27, 7, 174);
+            background-color: blanchedalmond;
+        }
+        h3{
+            color: rgb(27, 7, 174);
+            background-color: blanchedalmond;
+        }
+        */
+        
+        /* Tag01+Tag02 - CSS cho các thành phần tag02 kế sau tag01 */
+        h3+div{
+            background-color: cadetblue;
+        }
+
+        div+div{
+            border: solid #ddd 4px;
+        }
+
+        /* Tag01>Tag02 - CSS cho các thành phần tag02 là thành phần con của tag01 */
+        section>h3{
+            border: solid red 4px;
+        }
+
+        /* :first-child */
+        section:first-child{
+            color: rgb(208, 11, 106) !important;
+        }
+    </style>
+    </head>
+    <body>
+        <section>
+            <div>
+               explicabo, iste voluptatum praesentium. Doloremque,
+                    deleniti unde!
+
+                </p>       <h2>Tag01 Tag02</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda maiores quibusdam quod exercitationem sint
+                    repudiandae labore vero? Ad maiores eligendi perferendis ex
+                    quas           
+            </div>
+        </section>
+        <div>
+            <h3>Tag01,Tag02</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                repudiandae eaque quae tenetur explicabo in dignissimos fugit
+                ut, qui possimus! Eveniet maxime beatae quo temporibus natus
+                accusamus amet impedit blanditiis?</p>
+        </div>
+        <div>
+            <h3>Tag01+Tag02</h3>
+            <div>
+                đoạn văn Tag01+Tag02
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+                perferendis dolore et, assumenda voluptate excepturi vel ea
+                facere, velit, dolorem quisquam eaque accusantium impedit veniam
+                aut consequuntur obcaecati reprehenderit doloremque!
+            </div>
+        </div>
+
+        <section>
+            <h3>Tag01>Tag02</h3>
+            <div>
+                <h3>Nội dung tag01>Tag03</h3>
+            </div>
+        </section>
+
+    </body>
+</html>

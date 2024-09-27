@@ -1,0 +1,41 @@
+1. Các cách sử dụng CSS
+- C1: Viết trong thẻ HTML
+    + sử dụng thuộc tính style trong thẻ HTML
+EX: <h2 style="color: red;"> tiêu đề </h2>
+- C2: Viết trong file HTML
+    + dùng khối thẻ style <style>...</style> đặt ở đầu trang HTML
+- C3: Nhúng file css vào trong file HTML
+    + dùng thẻ link <link src= "..."> để nhúng file .css vào trang html
+
+2. Các các tương tác với thẻ HTML
+- Tương tác thông qua tên thẻ - h2{ ... }
+- Tương tác thông qua tên id của thẻ - #tên_id { ... }
+- Tương tác thông qua class của thẻ -  .tên_class { ... }
+- Tương tác thông qua thuộc tính của thẻ ["tên thuộc tính" = "thuộc tính"]{ ... }
+
+3. Lưu ý:
+- các thuộc tính của thẻ HTML sẽ ưu tiên sử dụng thuộc tính CSS sau
+- các thuộc tính của thẻ HTML sẽ ưu tiên sử dụng thuộc tính CSS trỏ gần nhất
+- mức độ ưu tiên !important -> thẻ #id -> tên thuộc tính -> class -> tên thẻ
+
+4. Một số bộ chọn của CSS
+
+- chọn tất cả nội dung trang: *,html
+- Chọn nội dung tag01: tag01
+- Chọn nội dung tag02 bên trong tag01: tag01 tag02
+- Chọn nội dung tag02 là thẻ con của tag01: tag01>tag02
+- Chọn nội dung tag02 liên trước của tag01: tag01+tag02
+- Chọn nội dung cho cả tag01 và tag02: tag01,tag02
+...
+
+5. Một số thuộc tính của CSS: 
+- display: block, none, flex, float;
+- position: relative, absolute, fixed;
+- left, right, bottom, top
+- margin, padding: khoảng cách
+- border: 
+- border-radius:
+- backgrond:
+- color:
+- text:
+- font:

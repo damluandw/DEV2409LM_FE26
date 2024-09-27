@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* Header top */
+#header-top {
+    background-color: #eae0e0;
+}
+
+#header-top>.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#header-top a {
+    color: black;
+    font-weight: bold;
+}
+
+#header-top-left,
+#header-top .header-top-icon {
+    padding: .4rem 0.8rem;
+}
+
+#header-top-left span i {
+    color: rgb(237, 120, 11);
+}
+
+#header-top .header-top-icon {
+    border-left: 2px solid #ccc;
+}
+
+#header-top>.container:last-child {
+    border-right: 2px solid #ccc;
+}
+
+/* ./Header top */
+/* Header mid */
+#search,
+#header-mid .header-mid-logo,
+#header-mid .header-mid-content {
+    align-content: center;
+}
+
+#search input {
+    padding: 0.5rem;
+    width: 20rem;
+    border-color: #ccc;
+}
+
+#search button {
+    padding: 0.5rem;
+    margin: -0.5rem;
+    border-color: #ccc;
+}
+
+#header-mid img {
+    object-fit: contain;
+}
+
+#header-mid .header-mid-content {
+    text-transform: uppercase;
+    width: 12.5rem;
+    margin-left: 1rem;
+}
+
+/* ./Header mid */
+/* Header bottom */
+#header-bottom {
+    background-color: rgb(2, 177, 2);
+    padding: 0.5rem;
+}
+
+#header-bottom #menu-1>li>a {
+    text-transform: uppercase;
+    padding: 0.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+#header-bottom #menu-1>li {
+    position: relative;
+}
+#header-bottom #menu-1>li:hover {
+    background-color: rgb(211, 139, 5);
+}
+
+#header-bottom #menu-1>li:hover>ul {
+    display: block;
+}
+
+#header-bottom #menu-1>li>ul {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    background-color: #dfdbdb;
+    width: 100%;
+    display: none;
+}
+
+#header-bottom img {
+    padding: 0 0.5rem;
+}
+
+#header-bottom #menu-1>li>ul>li {
+    padding: 0.6rem 0;
+    border: #ccc 1px solid;
+    border-top: none;
+}
+
+#header-bottom #menu-1>li>ul a {
+    color: black;
+}
+
+/* ./Header bottom */
