@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        // If:
+        if(5>4){
+            document.write("5>4 là đúng<br>")
+        }
+        // if else
+        // var number1 = prompt("Nhập giá trị number1");
+        // var number2 = prompt("Nhập giá trị number2");
+        // console.log("number1:", parseInt(number1));
+        // console.log("number2:", parseInt(number2));
+        // document.write("number1:", number1 , "<br>");
+        // document.write("number2:", number2, "<br>");
+        // if( parseInt(number1) >  parseInt(number2)){
+        //     document.write("number1>number2 <br>");
+        // }else{
+        //     document.write("number2>number1 <br>");
+        // }
+
+        // 
+
+        function soLonSoBe(a,b){
+            document.write("number1:", a , "<br>");
+            document.write("number2:", b, "<br>");
+            if( parseInt(a) >  parseInt(b)){
+                document.write("number1>number2 <br>");
+            }else{
+                document.write("number2 > number1 <br>");
+            }
+        }
+        // soLonSoBe(number1,number2);
+
+        var number1, number2;
+        var kt =false;
+        // do{
+        //     number1 = prompt("Nhập giá trị number1");
+        //     number2 = prompt("Nhập giá trị number2");
+        //     soLonSoBe(number1,number2);
+        //     kt = confirm("Bạn có muốn tiếp tục so sánh không");
+        // }while(kt);
+
+        while(kt){
+            number1 = prompt("Nhập giá trị number1");
+            number2 = prompt("Nhập giá trị number2");
+            soLonSoBe(number1,number2);
+            kt = confirm("Bạn có muốn tiếp tục so sánh không");
+        }
+
+        var arr = [1,2.3, 4, "khoa", "học", true, "false"];
+        for(let i=0; i< arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        var a = 10;
+        console.log("a: ",a);
+        console.log("++a: ",++a);
+        console.log("a: ",a);
+        console.log("a++: ",a++);
+        console.log("a: ",a);
+        var b  = a++;
+        //b = ++a
+        console.log(b);
+
+
+    </script>
+    </body>
+</html>

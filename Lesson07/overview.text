@@ -1,0 +1,117 @@
+I. Cách sử dụng Javascript trong file HTML - 3 cách:
+ - Cách 1: Viết trên thẻ HTML
+ - Cách 2: Viết trong file HTML
+ - Cách 3: Nhúng file js và trong file HTML
+
+
+II. Ngôn ngữ Javascript
+1. Khai báo biến, object, mảng,....
+    systax: var tên_biến; -- biến toàn cục
+            let tên_biến;  -- biến cục bộ
+            const tên_biến; -- hằng số 
+    1.1. Gán giá trị cho biến (=, +=, -=, *=,/=, %=)
+        Cách 1:  
+                var tên_biến;
+                tên_biến = 3;
+        Cách 2: 
+                var tên_biến = "giá trị";
+    1.2. Chú ý:
+        - Kiểu giá trị không cố định
+        - sẽ nhận kiểu giá trị theo biến được gán
+        - +=, -=, /= ,%=
+            a += 10  <=> a = a +10;
+2. Cấu trúc điều khiển
+    2.1. if else
+        2.1.1. if
+            systax: if( biểu_thức_logic ){
+                khối lệnh thực thi khi biểu_thức_logic đúng
+            }
+        2.1.2. if else
+            systax:
+            if( biểu_thức_logic ){
+                khối lệnh thực thi khi biểu_thức_logic đúng
+            }else{
+                khối lệnh thực thi khi biểu_thức_logic sai
+            }
+        2.1.3. if else if 
+            systax:
+            if( biểu_thức_logic_1 ){
+                khối lệnh thực thi khi biểu_thức_logic_1 đúng
+            }else if( biểu_thức_logic_2 ) {
+                khối lệnh thực thi khi biểu_thức_logic_2 đúng 
+            }else if( biểu_thức_logic_3 ) {
+                khối lệnh thực thi khi biểu_thức_logic_3 đúng 
+            }
+            ...
+            else{
+                khối lệnh thực thi khi biểu_thức_logic trên sai 
+            }
+        2.1.4. if lồng nhau
+            systax: 
+            if( biểu_thức_logic_1 ){
+                khối lệnh thực thi khi biểu_thức_logic_1 đúng
+
+                if( biểu_thức_logic_2 ){
+                    khối lệnh thực thi khi biểu_thức_logic_2 đúng
+                    if(...){
+                        ...
+                    }
+                }
+            }
+    2.2. switch case
+        systax 
+            switch(biến_kiểm_tra){
+                case giá_trị_1:
+                    khối lệnh thực thi khi case 1 đúng;
+                    break;
+                case giá_trị_2:
+                    khối lệnh thực thi khi case 2 đúng;
+                    break;
+                ...
+                default:
+                    khối lệnh thực thi khi tất cả các case sai;
+                    break;
+
+            }
+3. Vòng lặp
+    3.1. Vòng lặp for
+            systax:
+            for(biến khởi đầu/ khai báo giá trị khởi đầu; điều kiện lặp ; biến tăng ){
+                khối lệnh thực thi;
+            }
+
+    3.2. Vòng lặp while/ do while
+        - systax:
+            while(biểu thức logic){
+                khối lệnh thực thi
+            }
+
+            do{
+                khối lệnh thực thi
+            }while(biểu thức logic)
+        - Chú ý:
+            + while sẽ kiểm tra biểu thức logic trước khi thực hiện, nếu đúng thì khối lệnh bên trong được thực thi
+                nếu sai thoát khỏi vòng lặp.
+            + do while sẽ thực thi khối lệnh ở bên trong trước sau đó mới kiểm tra biểu thức logic nếu đúng thì thực thi tiếp
+                nếu sai thi thoát khỏi vòng lặp
+    3.3 for in, foreach
+
+4. Mảng
+    systax:
+        - var tên_biến = [];
+        - var tên_biến = Array();
+        - var tên_biến = [1,3,5,6];
+        - var tên_biến = Array(1,6,8,9);
+
+        ex: var a = [ 1, 3, 1.2, "sách" , "vở" , true , { object }]
+
+
+5. Hàm
+    systax:
+     function tên_hàm(biến_truyền_vào){
+        khối lệnh thực thi;
+        return giá_trị (có hoăc không đều được)
+     }
+    để sử dụng hàm:  tên_hàm(truyền biến nếu có);
+6. Rẽ nhánh
+    return, break, continue

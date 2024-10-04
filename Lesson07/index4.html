@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+</head>
+<body>
+    <script>
+        // Có phương trình a*x +b=0;
+        // Viết chương trình biện luận nghiệm x
+        // Nhập giá trị từ màn hình
+        // In nghiệm ra ngoài màn hình
+        var a,b;
+        // a = parseInt(prompt("Nhập giá trị a:"));
+        // b = parseInt(prompt("Nhập giá trị b: "));
+        // Cách 1:
+        // if(a == 0){
+        //     if(b==0){
+        //         document.writeln("Phương trình có vô số nghiệm")
+        //     }else{
+        //         document.writeln("Phương trình vô nghiệm")
+        //     }
+        // }else{
+        //     let x = (-b/a);
+        //     document.writeln("Phương trình có nghiệm duy nhất x = ",x );
+        // }
+
+        // Cách 2:
+        // if(a == 0 && b == 0){
+        //     document.writeln("Phương trình có vô số nghiệm")
+        // }else if( a==0 && b !=0){
+        //     document.writeln("Phương trình vô nghiệm")
+        // }else{
+        //     let x = (-b/a);
+        //     document.writeln("Phương trình có nghiệm duy nhất x = ",x );
+        // }
+        // Có phương phương trình bậc 2: a*x^2 + b*x + c =0
+        // Viết phương trình biện luận nghiệm x
+        // Nhập giá trị từ màn hình
+        // Có thể sử dụng function
+        // In nghiệm ra ngoài màn hình
+
+
+
+        // Cho một mảng arr = [ 1,5,6,9,9,4,5,6,54,7,3,23,6,7]
+        // 1. in ra ngoài màn hình mảng trên
+        // 2. hiển thị các số trong mảng có 2 lần xuất hiện
+        // 3. đếm số lần xuất hiện của các số đó
+        var arr = [ 1,5,6,9,9,4,5,6,54,7,3,23,6,7];
+        document.writeln("Mảng arr: ")
+        for(let i =0; i<arr.length; i++){
+            document.writeln(arr[i]," ,")
+        }
+        arr.sort();
+        document.writeln("<br>Mảng arr.sort(): ")
+        for(let i =0; i<arr.length; i++){
+            document.writeln(arr[i]," ,")
+        }
+        document.writeln("<br>Mảng arr giá trị xuất hiện nhiều lần: ");
+       
+        for(let i =0; i<arr.length -1; i++){
+            if(arr[i] == arr[i+1]){
+                    if(i == 0 ){
+                        document.writeln(arr[i]," ,");    
+                    }else{
+                        if(arr[i] != arr[i-1]){
+                            document.writeln(arr[i]," ,");   
+                        }
+                    }
+            }
+        }
+
+        document.writeln("<br>Mảng arr giá trị xuất hiện nhiều lần - số lần xuất hiện: ");
+        for(let i =0; i<arr.length -1; i++){
+            if(arr[i] == arr[i+1]){
+                    let dem =1;
+                    if(i == 0 ){                        
+                        for(let j =i+1; j<arr.length ;j++)  {
+                            if(arr[i] == arr[j]){
+                                dem++;
+                            }
+                        }
+                        document.writeln(arr[i]," - ", dem ,"<br>");
+                    }else{
+                        if(arr[i] != arr[i-1]){
+                            for(let j =i+1; j<arr.length ;j++)  {
+                                if(arr[i] == arr[j]){
+                                    dem++;
+                                }
+                            }
+                            document.writeln(arr[i]," - ", dem,"<br>");
+                        }
+                    }
+            }
+        }
+
+
+    </script>
+</body>
+</html>
