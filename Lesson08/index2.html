@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in Javascript</title>
+</head>
+<body>
+    <script>
+        // Object
+        // Systax: khai báo
+        var obj = new Object();
+        var obj2 = {};
+        obj2 = {
+            id : 1,
+            name : "",
+            age: 12
+        }
+
+        obj2 = {
+            id : 1,
+            name : "",
+            age: 12,
+            male :true
+        }
+
+        var obj3 = new Object({
+            id: 1,
+            name: "",
+            age: 0
+        });
+
+        var obj4 = {
+            id: 1,
+            name: "",
+            age: 4,
+            namSinh : function(){
+                return 3
+            }
+        };
+        console.log("obj: ",obj);
+        console.log("obj2: ",obj2);
+        console.log("obj3: ",obj3 );
+        console.log("obj4: ",obj4 );
+
+        console.log("obj4: ", obj4.namSinh() );
+
+        // Thao tác với Object
+        // Systax: Tên_obj.tên_thuộc_tính hoặc Tên_obj.tên_đối_tượng()  
+    </script>
+</body>
+</html>

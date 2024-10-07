@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragular Exception</title>
+    <style>
+        #error-email{
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="post">
+        <div>
+            <label for="email">email</label>
+            <input type="text" name="email" id="email" onkeypress="checkEmail()">
+            <div id="error-email">
+                Email chưa đúng định dạng
+            </div>
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <input type="submit" name="submit" id="submit">
+        </div>
+    </form>
+
+    <script>
+        function checkEmail(){
+            var regexEmail =/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            // var regexEmail =/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.com/;
+            var email_ = document.getElementById('email').value;
+            if (regexEmail.test(email_)){
+                console.log("none");
+                document.getElementById('error-email').style.display = 'none';
+            }else{
+                console.log("block");
+                document.getElementById('error-email').style.display = 'block';
+            }
+        }
+
+        // checkEmail();
+    </script>
+</body>
+</html>

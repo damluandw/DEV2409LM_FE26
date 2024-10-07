@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Các cách tương tác với thẻ HTML bằng Javascript</title>
+    </head>
+    <body>
+        <h1>Javascript tương tác với thẻ HTML qua tên thẻ</h1>
+
+        <h2 id="idName">Javascript tương tác với thẻ HTML qua ID</h2>
+
+        <p class="class-p"> Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Cum, deleniti velit? Consequatur similique accusamus libero
+            obcaecati autem rerum voluptas iure, unde inventore, eaque odio
+            ipsam voluptates vel delectus dicta minima!</p>
+        <p class="class-p"> Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Cum, deleniti velit? Consequatur similique accusamus libero
+            obcaecati autem rerum voluptas iure, unde inventore, eaque odio
+            ipsam voluptates vel delectus dicta minima!</p>
+
+        <div>
+            <div class="class-p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque dignissimos repellendus eos nobis ea. Harum doloribus iusto dolore quos. Inventore veniam adipisci facere numquam quas accusantium iusto dolorum accusamus totam.
+            </div>
+        </div>
+        <script>
+        // 4 cách 
+        // Cách 1:Javascript tương tác với HTML qua tên thẻ HTML
+        // document.getElementsByTagName('h1').style.color = "blue"
+        var element1 = document.getElementsByTagName('h1');
+        element1[0].style.color = "red";
+        
+        // Cách 2:Javascript tương tác với HTML qua ID của thẻ HTML
+        document.getElementById('idName').style.color = "blue"
+
+         // Cách 3:Javascript tương tác với HTML qua Class của thẻ HTML
+         document.getElementsByClassName('class-p')[0].style.color = "#ccc";
+
+
+        //  Cách 4: Javascript tương tác với HTML qua cú pháp CSS selector của thẻ HTML
+        document.querySelectorAll("div .class-p")[0].style.color = "green"
+    </script>
+    </body>
+</html>

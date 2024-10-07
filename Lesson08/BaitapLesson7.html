@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài tập</title>
+    </head>
+    <body>
+        <form action="post" name="ptb2">
+            <div>
+                <label for="so_a">Số a</label>
+                <input type="number" name="so_a" id="so_a">
+            </div>
+            <div>
+                <label for="so_b">Số b</label>
+                <input type="number" name="so_b" id="so_b">
+            </div>
+            <div>
+                <label for="so_c">Số c</label>
+                <input type="number" name="so_c" id="so_c">
+            </div>
+            <div>
+                <input type="submit" name="submit" id="submit" onclick="TinhToan()">
+            </div>
+        </form>
+        <script>
+        //Bài 1: Có phương trình a*x +b=0;
+        // Viết chương trình biện luận nghiệm x
+        // Nhập giá trị từ màn hình
+        // In nghiệm ra ngoài màn hình
+        // var a,b;
+        // a = parseInt(prompt("Nhập giá trị a:"));
+        // b = parseInt(prompt("Nhập giá trị b: "));
+        // Cách 1:
+        // if(a == 0){
+        //     if(b==0){
+        //         document.writeln("Phương trình có vô số nghiệm")
+        //     }else{
+        //         document.writeln("Phương trình vô nghiệm")
+        //     }
+        // }else{
+        //     let x = (-b/a);
+        //     document.writeln("Phương trình có nghiệm duy nhất x = ",x );
+        // }
+
+        // Cách 2:
+        // if(a == 0 && b == 0){
+        //     document.writeln("Phương trình có vô số nghiệm")
+        // }else if( a==0 && b !=0){
+        //     document.writeln("Phương trình vô nghiệm")
+        // }else{
+        //     let x = (-b/a);
+        //     document.writeln("Phương trình có nghiệm duy nhất x = ",x );
+        // }
+        // Bài 2: Có phương phương trình bậc 2: a*x^2 + b*x + c =0
+        // Viết phương trình biện luận nghiệm x
+        // Nhập giá trị từ màn hình
+        // Có thể sử dụng function
+        // In nghiệm ra ngoài màn hình
+        function PTB1(a,b){
+            if(a == 0){
+                if(b==0){
+                    document.writeln("Phương trình có vô số nghiệm")
+                }else{
+                    document.writeln("Phương trình vô nghiệm")
+                }
+            }else{
+                let x = (-b/a);
+                document.writeln("Phương trình có nghiệm duy nhất x = ",x );
+            }
+        }
+        function PTB2(a,b,c){
+            if( a== 0){
+                PTB1(b,c);
+            }else{
+                let delta = Math.pow(b,2) - 4 *a*c;
+                if(delta>0){
+                    let x1 = (-b+ Math.sqrt(delta))/2;
+                    let x2 = (-b - Math.sqrt(delta))/2;
+                    document.writeln("Phương trình có 2 nghiệm: <br>");
+                    document.writeln("x1 = ",x1);
+                    document.writeln("<br>x2 = ",x2);
+                }else if (delta==0){
+                    let x1 = -b/2;
+                    document.writeln("Phương trình duy nhất x1 = x2 = ",x1);
+                }else{
+                    document.writeln("Phương trình vô nghiệm");
+                }
+            }
+        }
+        
+        
+        function TinhToan(){    
+            PTB2(ptb2.so_a.value,ptb2.so_b.value,ptb2.so_c.value)
+        }
+
+        // Bài 3: Cho một mảng arr = [ 1,5,6,9,9,4,5,6,54,7,3,23,6,7]
+        // 1. in ra ngoài màn hình mảng trên
+        // 2. hiển thị các số trong mảng có 2 lần xuất hiện
+        // 3. đếm số lần xuất hiện của các số đó
+        // var arr = [ 1,5,6,9,9,4,5,6,54,7,3,23,6,7];
+        // document.writeln("Mảng arr: ")
+        // for(let i =0; i<arr.length; i++){
+        //     document.writeln(arr[i]," ,")
+        // }
+        // arr.sort();
+        // document.writeln("<br>Mảng arr.sort(): ")
+        // for(let i =0; i<arr.length; i++){
+        //     document.writeln(arr[i]," ,")
+        // }
+        // document.writeln("<br>Mảng arr giá trị xuất hiện nhiều lần: ");
+       
+        // for(let i =0; i<arr.length -1; i++){
+        //     if(arr[i] == arr[i+1]){
+        //             if(i == 0 ){
+        //                 document.writeln(arr[i]," ,");    
+        //             }else{
+        //                 if(arr[i] != arr[i-1]){
+        //                     document.writeln(arr[i]," ,");   
+        //                 }
+        //             }
+        //     }
+        // }
+
+        // document.writeln("<br>Mảng arr giá trị xuất hiện nhiều lần - số lần xuất hiện: ");
+        // for(let i =0; i<arr.length -1; i++){
+        //     if(arr[i] == arr[i+1]){
+        //             let dem =1;
+        //             if(i == 0 ){                        
+        //                 for(let j =i+1; j<arr.length ;j++)  {
+        //                     if(arr[i] == arr[j]){
+        //                         dem++;
+        //                     }
+        //                 }
+        //                 document.writeln(arr[i]," - ", dem ,"<br>");
+        //             }else{
+        //                 if(arr[i] != arr[i-1]){
+        //                     for(let j =i+1; j<arr.length ;j++)  {
+        //                         if(arr[i] == arr[j]){
+        //                             dem++;
+        //                         }
+        //                     }
+        //                     document.writeln(arr[i]," - ", dem,"<br>");
+        //                 }
+        //             }
+        //     }
+        // }
+
+
+        // Bài 4: Nhập vào một số bất kỳ,
+        // In ra màn hình các số nguyên tố nhỏ hơn số vừa nhập
+
+
+        // Bài 5: Nhập vào một số bất kỳ
+        // In ra màn hình các số chia hết cho 3 và nhỏ hơn số vừa nhập
+        
+
+        // Bài 7: Nhập vào một ký tự bất kỳ. Kiểm tra đó có phải là kiểu số hay không?
+        // Nếu đúng đưa về thông báo true
+        // Nếu sai yêu cầu nhập lại
+
+
+        ////Bài 8: In ra ngoài màn hình giá trị từ 1-> 50 sao cho số đó chia hết cho 5
+    </script>
+    </body>
+</html>
