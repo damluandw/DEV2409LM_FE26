@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Render dữ liệu</title>
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <!-- Hot Product -->
+        <section id="hot-product">
+            <div class="container d-flex flex-between">
+                <div class="w-20">
+                    <img class="w-100" src="imgs/bn-kimtien.png"
+                        alt="bn-kimtien">
+                </div>
+                <div id="list-pro-hot"
+                    class="w-80 d-flex flex-between flex-wrap">
+
+                </div>
+            </section>
+            <!-- ./Hot Product -->
+
+            <script>
+        var listPro = [
+            {
+                id: 'SP01',
+                name: "Cây kim tiền 1",
+                img: "imgs/sp-kimtien-1.png",
+                price: 1888000,
+                hot: true,
+                status: true,
+            },
+            {
+                id: 'SP02',
+                name: "Cây kim tiền 2",
+                img: "imgs/sp-kimtien-2.png",
+                price: 1888000,
+                hot: true,
+                status: true,
+            },
+            {
+                id: 'SP03',
+                name: "Cây kim tiền 3",
+                img: "imgs/sp-kimtien-1.png",
+                price: 1888000,
+                hot: true,
+                status: true,
+            },
+            {
+                id: 'SP04',
+                name: "Cây kim tiền 4",
+                img: "imgs/sp-kimtien-1.png",
+                price: 1888000,
+                hot: true,
+                status: true,
+            },
+            {
+                id: 'SP05',
+                name: "Cây kim tiền 5",
+                img: "imgs/sp-kimtien-2.png",
+                price: 1888000,
+                hot: true,
+                status: true,
+            },
+            {
+                id: 'SP06',
+                name: "Cây kim tiền 6",
+                img: "imgs/sp-kimtien-2.png",
+                price: 1888000,
+                hot: true,
+                status: true,
+            },
+            {
+                id: 'SP07',
+                name: "Cây kim tiền 7",
+                img: "imgs/sp-kimtien-1.png",
+                price: 1888000,
+                hot: true,
+                status: true,
+            },
+
+        ]
+        
+        function renderProduct(product){
+            var render = `<div class="w-25 box-product">
+                    <div>
+                        <div class="product-top">
+                            <img class="w-100" src="${product.img}" alt>
+                            <div class="mo-ta">
+                                <div>
+                                    <p>Lorem ipsum dolor, sit amet conse ctetur
+                                        amet conse ctetur
+                                        adipi sicing elit. Amet harum repu
+                                        dian.</p>
+                                    <div class="d-flex flex-between">
+                                        <button>Chi tiết</button>
+                                        <button>Mua ngay</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-bottom">
+                            <h3>${product.name}</h3>
+                            <p>${product.price}</p>
+                        </div>
+                    </div>
+                </div>`
+            return render;
+        }
+
+        function renderListProduct(listProduct){
+            var render = ``;
+            for(let i=0; i<listProduct.length; i++){
+              
+                render+= renderProduct(listProduct[i]);
+            }
+            document.getElementById("list-pro-hot").innerHTML = render;
+        }
+        renderListProduct(listPro);
+    </script>
+</body>
+</html>
