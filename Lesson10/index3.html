@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Render dữ liệu</title>
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/index.css">
+        <style>
+            ul li{
+                padding: 0.3rem 0.5rem;
+                border: 1px solid;
+                margin-right: 0.5rem;
+            }
+            .active{
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Hot Product -->
+        <section id="hot-product">
+            <div class="container d-flex flex-between">
+                <div class="w-20">
+                    <img class="w-100" src="imgs/bn-kimtien.png"
+                        alt="bn-kimtien">
+                </div>
+                <div class="w-80">
+                    <div id="list-pro-hot"
+                        class="d-flex flex-between flex-wrap">
+                    </div>
+                    <ul class="d-flex" id="page">
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+
+            </section>
+            <!-- ./Hot Product -->
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+                integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script>
+                var listPro = [
+                    {
+                        id: 'SP01',
+                        name: "Cây kim tiền 1",
+                        img: "imgs/sp-kimtien-1.png",
+                        price: 1888000,
+                        hot: true,
+                        status: true,
+                    },
+                    {
+                        id: 'SP02',
+                        name: "Cây kim tiền 2",
+                        img: "imgs/sp-kimtien-2.png",
+                        price: 1888000,
+                        hot: true,
+                        status: true,
+                    },
+                    {
+                        id: 'SP03',
+                        name: "Cây kim tiền 3",
+                        img: "imgs/sp-kimtien-1.png",
+                        price: 1888000,
+                        hot: true,
+                        status: true,
+                    },
+                    {
+                        id: 'SP04',
+                        name: "Cây kim tiền 4",
+                        img: "imgs/sp-kimtien-1.png",
+                        price: 1888000,
+                        hot: true,
+                        status: true,
+                    },
+                    {
+                        id: 'SP05',
+                        name: "Cây kim tiền 5",
+                        img: "imgs/sp-kimtien-2.png",
+                        price: 1888000,
+                        hot: true,
+                        status: true,
+                    },
+                    {
+                        id: 'SP06',
+                        name: "Cây kim tiền 6",
+                        img: "imgs/sp-kimtien-2.png",
+                        price: 1888000,
+                        hot: true,
+                        status: true,
+                    },
+                    {
+                        id: 'SP07',
+                        name: "Cây kim tiền 7",
+                        img: "imgs/sp-kimtien-1.png",
+                        price: 1888000,
+                        hot: true,
+                        status: true,
+                    },
+
+                ]
+                
+                var pages ={
+                    viTri: 1, //ví trí trang
+                    SL: 3 , // số lượng sản phẩm trên 1 trang
+                    SLPageMax:0,
+                    STTKhoiDau:0, // số thứ tự sản phẩm đầu của page
+                    STTKetThuc:0 // số thứ tự sản phẩm cuối của page
+                }
+                function Page(listProduct){
+                    pages.SLPageMax = Math.ceil(listProduct.length/pages.SL)
+                    pages.STTKhoiDau = (pages.viTri-1)*pages.SL;
+                    pages.STTKetThuc = pages.viTri*pages.SL - 1
+                    if(pages.STTKetThuc > listProduct.length-1){
+                        pages.STTKetThuc = listProduct.length-1;
+                    }
+                }
+              
+                function renderPage(page){
+                    var render
+                    if(page == pages.viTri){
+                         render = `<li data-page-id= "${page}" class ="page active">${page}</li>`
+                    }else{
+                        render = `<li data-page-id= "${page}" class ="page">${page}</li>`
+                    }
+                    
+                    return render;
+                }
+                function renderListPage(listProduct){
+                    Page(listProduct);
+                    var render = ``;
+                    for(let i= 0 ; i< pages.SLPageMax; i++){
+                        render+= renderPage(i+1)
+                    }
+                    $("#page").html(render);
+
+                }
+                renderListPage(listPro);
+
+                function renderProduct(product){
+                    var render = `<div class="w-25 box-product">
+                            <div>
+                                <div class="product-top">
+                                    <img class="w-100" src="${product.img}" alt>
+                                    <div class="mo-ta">
+                                        <div>
+                                            <p>Lorem ipsum dolor, sit amet conse ctetur
+                                                amet conse ctetur
+                                                adipi sicing elit. Amet harum repu
+                                                dian.</p>
+                                            <div class="d-flex flex-between">
+                                                <button>Chi tiết</button>
+                                                <button>Mua ngay</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-bottom">
+                                    <h3>${product.name}</h3>
+                                    <p>${product.price}</p>
+                                </div>
+                            </div>
+                        </div>`
+                    return render;
+                }
+
+                function renderListProduct(listProduct){
+                    var render = ``;
+                    for(let i = pages.STTKhoiDau ; i <= pages.STTKetThuc; i++){                    
+                        render+= renderProduct(listProduct[i]);
+                    }
+                    $("#list-pro-hot").html(render);
+                }
+                renderListProduct(listPro);
+
+                $('.page').on("click",(evt)=>{
+                    console.log($(evt.target).attr('data-page-id'))
+                    pages.viTri = parseInt($(evt.target).attr('data-page-id'))
+                    Page(listPro);
+                    renderListProduct(listPro);
+                    $(evt.target).siblings().removeClass('active')
+                    $(evt.target).addClass('active');
+                })
+                // Page(listPro);
+            </script>
+        </body>
+    </html>

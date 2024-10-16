@@ -1,0 +1,66 @@
+#hot-product{
+    margin-top: 2rem;
+}
+
+/* #hot-product .w-80{
+    flex-wrap: wrap;
+} */
+.box-product{
+    border: 1px solid #ccc;
+    /* height: 17rem; */
+    margin-bottom: 2rem;
+}
+
+.product-top{
+    position: relative;
+}
+
+.box-product>div{
+    margin: 0.5rem auto;
+    width: 95%;
+}
+.product-bottom{
+    text-align: center;
+}
+.product-top .mo-ta{
+    background-color:  rgba(2, 177, 2,0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.product-top button{
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    background-color: #fff;
+    border: none;
+    text-transform: uppercase;
+    
+}
+
+.product-top .mo-ta>div{
+    width: 90%;
+    margin: auto;
+}
+
+.product-top  p{
+    color: #fff;
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    padding-bottom: 1rem;
+}
+
+.product-top .mo-ta>div{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.box-product:hover .mo-ta{
+    display: block;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .error{
+            color: red;
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+        <form action="post" name="frm">
+            <div>
+                <label for="hoVaTen">Họ và tên</label>
+                <input type="text" name="hoVaTen" id="hoVaTen">
+                <p id="err-ho-va-ten" class="error">
+                    Vui lòng không để trống
+                </p>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <p id="err-email" class="error">
+                    Vui lòng không để trống
+                </p>
+
+                <p id="err-email-fail" class="error">
+                    Email không hợp lệ! Vui lòng nhập lại!
+                </p>
+            </div>
+            <div>
+                <label for="password">Mật khẩu</label>
+                <input type="password" name="password" id="password">
+                <input type="checkbox" name="showPass" id="showPass">
+                <p id="err-pass" class="error">
+                    Vui lòng không để trống
+                </p>
+            </div>
+            <div>
+                <label for="rePassword">Nhập lại mật khẩu</label>
+                <input type="password" name="repassword" id="repassword">
+                <input type="checkbox" name="showRePass" id="showRePass">
+                <p id="err-re-pass" class="error">
+                    Vui lòng không để trống
+                </p>
+                <p id="err-re-pass-fail" class="error">
+                    Mật khẩu không khớp! Vui lòng kiểm tra lại!
+                </p>
+            </div>
+            <div>
+                <label for="tuoi">Tuổi</label>
+                <input type="number" name="tuoi" id="tuoi">
+                <p id="err-tuoi" class="error">
+                    Vui lòng không để trống
+                </p>
+                <p id="err-tuoi-fail" class="error">
+                    Vui lòng nhập tuổi trên 18
+                </p>
+            </div>
+            <div>
+                <input type="submit" name="submit" id="submit">
+            </div>
+        </form>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            //  var hoVaTen = $("#hoVaTen");
+            //  hoVaTen.on('blur',()=>{
+            //     if(hoVaTen.val() == "" || hoVaTen.val() == null){
+            //         hoVaTen.siblings('p').show();
+            //     }else{
+            //         // $("#hoVaTen").siblings('p').hide();
+            //         // $("#err-ho-va-ten").hide();
+            //         $("#err-ho-va-ten").css("display", "none")
+            //     }                
+            // })
+
+            // $("#email").on('blur',()=>{
+            //     if($("#email").val() == "" || $("#email").val() == null){
+            //         $("#email").siblings('p').first().show();
+            //     }else{
+            //         $("#email").siblings('p:first').hide();
+            //     }                
+            // })
+            var regexEmail =/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            $("input").on("blur",(evt)=>{
+                var id = "#"+evt.target.id;
+                // Check input trống
+               if(evt.target.value == "" || evt.target.value == null){
+                    $(id).siblings('p').first().show();               
+               }else{
+                    $(id).siblings('p:first').hide();
+                    // Check email không đúng định dạng
+                    if(evt.target.id == "email"){
+                        if(!regexEmail.test(evt.target.value)){
+                            $(id).siblings('p').last().show();                   
+                        }else{
+                            $(id).siblings('p').last().hide(); 
+                        }
+                    }
+               }
+               
+            })
+
+
+           
+        </script>
+    </body>
+</html>
