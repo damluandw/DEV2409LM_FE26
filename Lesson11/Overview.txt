@@ -1,0 +1,24 @@
+1. HTML
+2. CSS
+3. Javacript
+4. DOM
+5. Jquery
+6. Bootstrap
+6.1. Import Bootstrap
+- Cách 1: Import từ file có sẵn
+- Cách 2: Import thư viện onl
+6.2 Sử dụng Bootstrap
+-  sử dụng class có sẵn của Bootstrap
+- copy code từ trang doc của Bootstrap (https://getbootstrap.com/)
+6.3. Row - col
+<tên_thẻ class = "row" >
+    <tên_thẻ class = "col-kích_thước-số_lượng_ô" >nội dung</tên_thẻ>
+    <tên_thẻ class = "col-kích_thước-số_lượng_ô" >nội dung</tên_thẻ>
+    <tên_thẻ class = "col-kích_thước-số_lượng_ô" >nội dung</tên_thẻ>
+</tên_thẻ>
+
+Lưu ý:
+    - trong class row và col thì màn hình sẽ đc chia thành 12 cột đều nhau
+-> số_lượng_ô: sẽ từ 1 đến 12 tuỳ theo thiết kế cho phù hợp
+    - kích_thước: nhận các giá trị sm (di động),md (tablet),lg (máy tính)
+                    ,xl (máy tính),xxl(máy tính) hoặc k dùng

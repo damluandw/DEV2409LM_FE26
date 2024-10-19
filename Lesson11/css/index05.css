@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.w-90{
+    width: 90%;
+}
+#tintuc{
+    background-color: #ccc;
+
+}
+/* 
+#tintuc>.container{
+    margin-top: 20rem;
+} */
+
+#tintuc h3,#tintuc p{
+    text-align: justify;
+}
+
+#tintuc .page-item:first-child .page-link {
+    border-radius: 0;
+}
+
+#tintuc .page-link.active{
+    background-color: #daa00d !important;
+    color: black !important;
+    border-color: #daa00d;
+}
