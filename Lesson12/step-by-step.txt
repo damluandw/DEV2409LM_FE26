@@ -1,0 +1,42 @@
+1. Cài đặt PhotoShop CS6
+2. Một số phím tắt
+    - Ctrl + O : Mở file psd
+    - Ctrl + 0 : View toàn màn hình file psd
+    - Ctrl + 1 : Đưa về view kích thước chuẩn màn hình
+    - Ctrl + R : Hiển/Ẩn thanh thước đo
+    - Double Left Mouse vào thanh thước đo : Cài đặt 
+    - F7: hiển thị/ ẩn tab layer
+    - F8: Hiển thị/ Ẩn tab thông tin
+    - Alt + lăn chuột: Phóng to/ Thu nhỏ
+    - Ctrl + space +Left Mouse : phóng to
+    - Ctrl + space + alt + Left Mouse : thu nhỏ
+    - Space + Left Mouse: di chuyển vị trí hình ảnh
+   
+
+3. Cắt ảnh
+    - Cách 1: Cắt từng ảnh
+        ++ Chọn move tool -> chọn hình ảnh cần Cắt
+        ++ Alt + Left Mouse + Biểu tượng mắt
+        ++ Image -> Trim -> OK
+        ++ File -> (Export) -> Save for Web
+        ++ Chọn thông số để lưu -> Save -> Chọn thư mục lưu -> Save -> F12
+    - Cách 2: Sử dụng slice tool -> cắt được nhiều ảnh 1 lần (cắt được theo kích thước mong muốn)
+        ++ Right Mouse thanh công cụ -> chọn slice tool
+        ++ Khoanh các vùng cần cắt -> Right Mouse -> Chọn Edit Slice Option
+        ++ Đặt tên và chỉnh kích thước
+        ++ Right Mouse thanh công cụ -> chọn slice select tool -> chọn các slice vừa Cắt
+        ++ Image -> Trim -> OK
+        ++ File -> (Export) -> Save for Web
+        ++ Chọn trên thanh lưu là all slice/ select slice -> Save
+    - Cách 3: Crop tool
+        ++ Right Mouse thanh công cụ -> chọn crop tool
+        ++ Khoanh các vùng cần cắt       
+        ++ File -> (Export) -> Save for Web
+        ++ Save
+4. Đo kích thước/Fonts/ Bảng màu
+    - bảng màu
+        ++ Chọn trên thanh công cụ đo bảng màu -> chỏ đến vị trí lấy màu
+        ++ Right Mouse -> Copy color as HTML/Hex Code
+            Ex: color="#2c2e53"/ 2c2e53
+
+   
