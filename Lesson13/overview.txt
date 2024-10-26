@@ -1,0 +1,50 @@
+1. HTML
+    - tên thẻ và thuộc tính của thẻ
+2. CSS
+    - Các cách tương tác với thẻ HTML
+    - Các thuộc tính của CSS
+    - Các cấp độ ưu tiên trong CSS
+3. Javacript
+    3.1. Ngôn ngữ Javacript
+        - khai báo biến/mảng/object/function...
+        - cấu trúc vòng lặp
+        - cấu rẽ nhánh(điều kiện)
+        - phép gán (=,+=,/=,*=)
+        - phép so sánh(==,===,!=,>=,<=)
+        - phép logic (&&,||,!)
+        - regular exception
+    3.2. Tương tác với thẻ HTML
+        3.2.1. DOM
+            - các cách tương tác với thẻ HTML
+            - phần xử lý các thuộc tính khi tương tác
+            - một số sự kiện trong DOM
+        3.2.2. Jquery (thư viện)
+            - cách nhúng Jquery để sử dụng
+            - các cách tương tác với thẻ HTML
+            - phần xử lý các thuộc tính khi tương tác
+            - một số sự kiện trong DOM
+4. Bootstrap (thư viện để CSS nhanh hơn)
+    - cách nhúng Bootstrap để sử dụng
+    - sử dụng các class có sẵn của Bootstrap
+        + carousel - xử lý slide 
+        + row/col
+        + container
+        + d-flex (class liên quan đến d-flex)
+        ...
+    - làm quen với các hậu tố xs,md,lg,xl, xxl để xử lý responsive
+    - học cách ghi đè CSS
+5. Photoshop
+    - đo kích thước
+    - lấy mã màu
+    - cắt ảnh
+    - kiểm tra font chữ (font-family) - kích thước chữ (font-size)
+6. Slick (xử lý slide và list danh sách trên 1 hàng)
+    6.1. import thư viện Jquery
+    6.2. import thư viện slick ( thư viện css và thư viện js)
+    6.3. copy/code vào file js hoặc trong thẻ script (https://kenwheeler.github.io/slick/)
+
+        $('bộ chọn theo CSS').slick({
+            //nội dung xử lý
+        })
+
+    6.4. CSS lại theo thiết kế

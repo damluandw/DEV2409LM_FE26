@@ -1,0 +1,45 @@
+#banner {
+    margin-top: 3rem;
+    background-image: url("../imgs/bn_trang_chu.jpg");
+    background-size: 100%;
+    height: 59.625rem;
+}
+
+#banner .container{
+    position: relative;
+}
+
+#banner .content-banner{
+    position: absolute;
+    top: 13.25rem;
+    left: 3.25rem;
+}
+
+#banner h2{
+    color: #2c2e53;
+    text-transform: uppercase;
+    font-size: 2.9rem;
+    font-family: 'Gotham-Ultra';
+}
+#banner span{
+    color: #bd945f;
+    text-transform: uppercase;
+    font-size: 2.9rem;
+    font-family: 'Gotham-Ultra';
+}
+#banner .content-banner p{
+    width: 34.75rem;
+    line-height: 1.2;
+    text-align: justify;
+    margin: 2rem 0;
+}
+
+
+#banner .btn-lien-he{
+    font-family: 'Gotham-Ultra';
+    background-color: #bd945f;
+    color: #fff;
+    padding: 1.25rem 2rem;
+    border-radius: 0;
+    font-size: 1.20rem;
+}
