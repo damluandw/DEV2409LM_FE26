@@ -1,5 +1,5 @@
-$('#list-product .container').slick({
-    dots: true,
+$('#list-product .products').slick({
+    dots: false,
     infinite: false,
     speed: 300,
     slidesToShow: 4,
@@ -11,7 +11,7 @@ $('#list-product .container').slick({
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          dots: false
         }
       },
       {
@@ -33,3 +33,10 @@ $('#list-product .container').slick({
       // instead of a settings object
     ]
   });
+  $( "#list-product .slick-prev").html("<");
+  $( "#list-product .slick-next").html(">");
+  // $("#list-produc .container" ).on( "load", function() {
+  //     console.log("11");
+  //     $( "#list-product .slick-prev").html("<");
+  //     $( "#list-product .slick-next").html(">");
+  // } );

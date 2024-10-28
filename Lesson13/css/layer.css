@@ -18,6 +18,22 @@ ul{
         max-width: 1280px;
     }
 }
+
+.cl-1{
+    color: #bd945f;
+}
+.cl-2{
+    color: #2c2e53;
+}
+.font-ult{
+    font-family: 'Gotham-Ultra';
+}
+.font-md{
+    font-family: 'Gotham-Medium';
+}
+.font-thin{
+    font-family: 'Gotham-Thin';
+}
 /* 
 .container{
     max-width: 1280px;
@@ -36,6 +52,7 @@ ul{
     width: 100%;
     background-color: #fff;
     top: 0;
+    z-index: 99;
 }
 #header-nav li{
     position: relative;

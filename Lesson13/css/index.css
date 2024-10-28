@@ -2,7 +2,7 @@
     margin-top: 3rem;
     background-image: url("../imgs/bn_trang_chu.jpg");
     background-size: 100%;
-    height: 59.625rem;
+    height: 56.5rem;
 }
 
 #banner .container{
@@ -43,3 +43,133 @@
     border-radius: 0;
     font-size: 1.20rem;
 }
+
+
+#list-product h3{
+    font-size: 1rem;
+    text-align: center;
+}
+
+#list-product .content-product>div{
+   text-align: center; 
+}
+
+.pro-size{
+    color: #a8a8a8;
+    font-size: 0.75rem;
+}
+
+.pro-price{
+    font-size: 0.75rem;
+}
+
+#list-product .img-product{
+    max-width: 272px;
+    max-height: 272px;
+}
+
+#list-product .content-product{
+    margin-top: 0.75rem;
+}
+
+#list-product .products{
+    position: relative;
+}
+
+#list-product .slick-arrow{
+    position: absolute;
+    top: 30%;
+    border-radius: 50%;
+    background-color: #bd945f;
+    color: #fff;
+    border: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 2rem;
+}
+#list-product .slick-prev{
+    left: -1.5rem;
+}
+#list-product .slick-next{
+    right: -1.5rem;
+}
+
+.box-product .img-product{
+    position: relative;
+}
+
+.box-product .img-product .box-product-hover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+.box-product:hover .box-product-hover{
+    display: block;
+}
+
+
+#categories .box-category{
+    max-width: 176px;
+    margin: 3rem 0; 
+}
+#categories .box-category a{
+    font-family: 'Gotham-Ultra';
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #2c2e53; 
+}
+
+#categories .row{
+    max-width: 1120px;
+    margin: 0 auto;
+   
+}
+#categories,#list-product{
+    background-color: #f3f3f3;
+}
+
+#categories{
+    background-color: #f3f3f3;
+    height: 35rem;
+ 
+}
+#categories .container{
+    position: relative;
+}
+
+#categories .container >div{
+    position: absolute;
+    top: -6rem;
+    z-index: 2;
+    background-color: #fff;
+    width: 100%;
+}
+
+
+/* about us */
+#about-us{
+    margin-top: 3rem;
+    background-image: url("../imgs/bg_about_us.jpg");
+    background-size: 100%;
+    height: 56.5rem;
+    position: relative;
+}
+#about-us::before{
+    content: '';
+    width: 100%;
+    height: 56.5rem;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;   
+}
+/* about us */
+/* 
+#exampleModal{
+    max-width: 60rem;
+} */
