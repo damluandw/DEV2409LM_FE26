@@ -1,0 +1,69 @@
+#banner{
+    margin-top: 8.75rem;
+    position: relative;
+}
+
+#banner .content-banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    flex-direction: column;
+}
+
+#banner h2{
+    font-family: 'Gotham-Ultra';
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 0.75rem;
+}
+#banner .logo-banner img{
+    filter: brightness(0) invert(1);
+    /* -webkit-filter: brightness(0) invert(1); */
+}
+
+#lien-he{
+    background-color: #f3f3f3;
+    height: 40.25rem;
+}
+#lien-he .container{
+    position: relative;
+}
+
+#lien-he .box-lien-he{
+    background-color: #fff;
+    height: 40.25rem;
+    position: absolute;
+    top: -3.875rem;
+    width: 100%;
+}
+
+#lien-he .lien-he-left,
+#lien-he .lien-he-right{
+    margin-top: 6.75rem;
+}
+
+#lien-he input{
+    border: 4px solid #bd945f;
+    border-radius: 0;
+    color: #2c2e53; 
+    margin-bottom: 1rem;
+    height: 3.25rem;
+}
+
+
+#lien-he .btn-lien-he{
+    background-color: #bd945f;
+    color: #fff;
+    padding: 1.25rem 3rem;
+    border: none;
+}
+
+#lien-he h3{
+    margin-bottom: 1.25rem;
+}
+
+.error{
+    color: red;
+    display: none;
+}

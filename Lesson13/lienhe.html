@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Xưởng mộc</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/layer.css">
+        <link rel="stylesheet" href="css/lienhe.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <div class="d-flex justify-content-between">
+                    <div id="header-logo">
+                        <img class="w-100" src="imgs/logo.jpg" alt="logo">
+                    </div>
+                    <nav id="header-nav" class="d-flex">
+                        <ul
+                            class="nav justify-content-end align-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="index.html">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tin Tức</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Đối tác</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="lienhe.html">Liên
+                                    hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- ./Header -->
+        <!-- Banner -->
+        <section id="banner">
+            <img class="w-100" src="imgs/lienhe/LIENHE.jpg" alt="LIENHE">
+            <div class="content-banner">
+                <div class="logo-banner d-flex justify-content-center">
+                    <!-- <img src="imgs/logo-2.png" alt="logo"> -->
+                    <img src="imgs/lienhe/logo-3.png" alt="logo-3">
+                </div>
+                <h2>LIÊN HỆ</h2>
+            </div>
+        </section>
+        <!-- ./Banner -->
+        <!-- Liên hệ -->
+        <section id="lien-he">
+            <div class="container">
+                <div class="box-lien-he">
+                    <div class="row">
+                        <div class="lien-he-left col-lg-6">
+                            <div
+                                class="img-lien-he d-flex justify-content-center">
+                                <img src="imgs/lienhe/img-lien-he.jpg"
+                                    alt="img-lien-he.jpg">
+                            </div>
+                        </div>
+                        <div class="lien-he-right col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <h3 class="text-uppercase cl-1 font-ult">Liên hệ với chúng tôi</h3>
+                                    <input class="form-control" type="text" id="name"
+                                        placeholder="Họ tên"
+                                        aria-label="default input example">
+                                        <p id="err-name" class="error">
+                                            Vui lòng không để trống
+                                        </p>
+                                    <input class="form-control" type="text" 
+                                        placeholder="Email" id="email"
+                                        aria-label="default input example">
+                                        <p id="err-email" class="error">
+                                            Vui lòng không để trống
+                                        </p>
+                                        <p id="err-email-2" class="error">
+                                            Email không hợp lệ! Vui lòng nhập lại!
+                                        </p>
+                                    <input class="form-control" type="text"
+                                        placeholder="Số điện thoại" id ="phone"
+                                        aria-label="default input example">
+                                        <p id="err-phone" class="error">
+                                            Vui lòng không để trống
+                                        </p>
+                                        <p id="err-phone-2" class="error">
+                                            Số điện thoại không hợp lệ! Vui lòng nhập lại!
+                                        </p>
+                                    <input class="form-control" type="text"
+                                        placeholder="Nội dung" id ="content"
+                                        aria-label="default input example">
+                                        <p id="err-content" class="error">
+                                            Vui lòng không để trống
+                                        </p>
+                                    <button class="btn-lien-he">Gửi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./Liên hệ -->
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-5 col-xs-12">
+                        <div>
+                            <h4>Thông tin chung</h4>
+                            <h5>Công ty hoàng hoan</h5>
+                            <address>
+                                <div>
+                                    <span class="icon-footer-address">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </span>
+                                    <span>
+                                        <a href="tel:099999999">0999.999.999</a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="icon-footer-address">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </span>
+                                    <span>
+                                        <a
+                                            href="mailto:cskh@hoanghoan.vn">cskh@hoanghoan.vn</a>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class="icon-footer-address">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </span>
+                                    <span>
+                                        Số 1 Nguyễn Trãi, Thanh Xuân, Hà Nội
+                                    </span>
+                                </div>
+                            </address>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-4 col-md-3 col-xs-12 d-flex justify-content-lg-center justify-content-md-end ">
+                        <div>
+                            <h4>Về chúng tôi</h4>
+                            <nav>
+                                <ul>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Giới
+                                            thiệu</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Sản
+                                            phẩm</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tin Tức</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Đối tác</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Liên hệ</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div
+                        class="col-lg-4 col-xs-12 d-flex justify-content-lg-end">
+                        <div>
+                            <h4>Kết nối với chúng tôi</h4>
+                            <div>
+                                <span class="icon-footer-connect">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </span>
+                                <span class="icon-footer-connect">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </span>
+                                <span class="icon-footer-connect">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ./Footer -->
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <script src="js/lien-he.js"></script>
+    </body>
+</html>
